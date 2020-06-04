@@ -1,0 +1,2655 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Home</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<link rel="icon" href="https://github.com/workflowr/workflowr-assets/raw/master/img/reproducible.png">
+<!-- Add a small amount of space between sections. -->
+<style type="text/css">
+div.section {
+  padding-top: 12px;
+}
+</style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">myproject1</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="license.html">License</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Home</h1>
+
+</div>
+
+
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</button>
+</p>
+<div id="workflowr-report" class="collapse">
+<ul class="nav nav-tabs">
+<li class="active">
+<a data-toggle="tab" href="#summary">Summary</a>
+</li>
+<li>
+<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
+</li>
+<li>
+<a data-toggle="tab" href="#versions">Past versions</a>
+</li>
+</ul>
+<div class="tab-content">
+<div id="summary" class="tab-pane fade in active">
+<p>
+<strong>Last updated:</strong> 2020-06-04
+</p>
+<p>
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+</p>
+<p>
+<strong>Knit directory:</strong> <code>myproject1/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
+</p>
+<p>
+This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis was created with <a
+  href="https://github.com/jdblischak/workflowr">workflowr</a> (version 1.6.2). The <em>Checks</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
+</p>
+<hr>
+</div>
+<div id="checks" class="tab-pane fade">
+<div id="workflowr-checks" class="panel-group">
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date </a>
+</p>
+</div>
+<div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomcaglarberkelcaglarberkelgithubiotree14d9ccc770d1b87720cf70f386f87edbc6b8ea29targetblank14d9ccca"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/caglarberkel/caglarberkel.github.io/tree/14d9ccc770d1b87720cf70f386f87edbc6b8ea29" target="_blank">14d9ccc</a> </a>
+</p>
+</div>
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomcaglarberkelcaglarberkelgithubiotree14d9ccc770d1b87720cf70f386f87edbc6b8ea29targetblank14d9ccca" class="panel-collapse collapse">
+<div class="panel-body">
+<p>
+Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
+</p>
+<p>
+The results in this page were generated with repository version <a href="https://github.com/caglarberkel/caglarberkel.github.io/tree/14d9ccc770d1b87720cf70f386f87edbc6b8ea29" target="_blank">14d9ccc</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+</p>
+<p>
+Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
+</p>
+<pre><code>
+Ignored files:
+    Ignored:    .Rhistory
+    Ignored:    MTT_30May_OV2008_A2780_BOR_OLA_files/
+    Ignored:    mnist-data/
+
+Untracked files:
+    Untracked:  $
+    Untracked:  .AnnotationHub/
+    Untracked:  .CFUserTextEncoding
+    Untracked:  .DS_Store
+    Untracked:  .ExperimentHub/
+    Untracked:  .R/
+    Untracked:  .Rapp.history
+    Untracked:  .Rcache/
+    Untracked:  .Rprofile
+    Untracked:  .Trash/
+    Untracked:  .Xauthority
+    Untracked:  .anaconda/
+    Untracked:  .anydesk/
+    Untracked:  .bash_history
+    Untracked:  .bash_profile
+    Untracked:  .bash_profile-anaconda2.bak
+    Untracked:  .bash_profile-anaconda3.bak
+    Untracked:  .bash_sessions/
+    Untracked:  .cache/
+    Untracked:  .conda/
+    Untracked:  .condarc
+    Untracked:  .config/
+    Untracked:  .cups/
+    Untracked:  .gitconfig
+    Untracked:  .gitignore
+    Untracked:  .idea/
+    Untracked:  .idlerc/
+    Untracked:  .ipython/
+    Untracked:  .jupyter/
+    Untracked:  .keras/
+    Untracked:  .local/
+    Untracked:  .matplotlib/
+    Untracked:  .odbc.ini
+    Untracked:  .openshot_qt/
+    Untracked:  .python_history
+    Untracked:  .rstudio-desktop/
+    Untracked:  .serverauth.3832
+    Untracked:  .spyder-py3/
+    Untracked:  .ssh/
+    Untracked:  .subversion/
+    Untracked:  .virtualenvs/
+    Untracked:  .wget-hsts
+    Untracked:  AUT_msk_alt.grd
+    Untracked:  AUT_msk_alt.gri
+    Untracked:  AUT_msk_alt.vrt
+    Untracked:  Applications/
+    Untracked:  Bioconductor.Rmd
+    Untracked:  Brad.-Assay.html
+    Untracked:  Brad.-Assay.pdf
+    Untracked:  Bradford-Assay.html
+    Untracked:  Bradford-Assay.pdf
+    Untracked:  CHE_msk_alt.grd
+    Untracked:  CHE_msk_alt.gri
+    Untracked:  CHE_msk_alt.vrt
+    Untracked:  COVID-19 data visualization.Rmd
+    Untracked:  COVID-19-data-visualization.html
+    Untracked:  CytoscapeConfiguration/
+    Untracked:  DNAse-histogram-demo.pdf
+    Untracked:  DYNLL1_NSC319726.Rmd
+    Untracked:  DYNLL1_NSC319726.html
+    Untracked:  Desktop/
+    Untracked:  Documents/
+    Untracked:  Downloads/
+    Untracked:  ESP2_alt.grd
+    Untracked:  ESP2_alt.gri
+    Untracked:  ESP2_alt.vrt
+    Untracked:  ESP2_msk_alt.grd
+    Untracked:  ESP2_msk_alt.gri
+    Untracked:  ESP2_msk_alt.vrt
+    Untracked:  ESP_alt.grd
+    Untracked:  ESP_alt.gri
+    Untracked:  ESP_alt.vrt
+    Untracked:  ESP_msk_alt.grd
+    Untracked:  ESP_msk_alt.gri
+    Untracked:  ESP_msk_alt.vrt
+    Untracked:  Figure1.png
+    Untracked:  GSE63310_RAW.tar
+    Untracked:  GSM1545535_10_6_5_11.txt
+    Untracked:  GSM1545536_9_6_5_11.txt
+    Untracked:  GSM1545537_mo906111-1_m09611-2.txt.gz
+    Untracked:  GSM1545538_purep53.txt
+    Untracked:  GSM1545539_JMS8-2.txt
+    Untracked:  GSM1545540_JMS8-3.txt
+    Untracked:  GSM1545541_JMS8-4.txt
+    Untracked:  GSM1545542_JMS8-5.txt
+    Untracked:  GSM1545543_JMS9-CDBG.txt.gz
+    Untracked:  GSM1545544_JMS9-P7c.txt
+    Untracked:  GSM1545545_JMS9-P8c.txt
+    Untracked:  Law_RNAseq123/
+    Untracked:  Library/
+    Untracked:  MBG Lab sınav+ rapor sonuçlar.xlsx
+    Untracked:  MOSE_DYNLL1.Rmd
+    Untracked:  MTT_30May_OV2008_A2780_BOR_OLA.Rmd
+    Untracked:  Movies/
+    Untracked:  Music/
+    Untracked:  Pictures/
+    Untracked:  Public/
+    Untracked:  Rscript_berkel_et_al.Rmd
+    Untracked:  Rscript_berkel_et_al.html
+    Untracked:  Rscript_berkel_et_al.log
+    Untracked:  SRB_graphs.Rmd
+    Untracked:  SRB_graphs.html
+    Untracked:  TUR_alt.grd
+    Untracked:  TUR_alt.gri
+    Untracked:  TUR_alt.vrt
+    Untracked:  TUR_msk_alt.grd
+    Untracked:  TUR_msk_alt.gri
+    Untracked:  TUR_msk_alt.vrt
+    Untracked:  Turkey-intercity-distances.html
+    Untracked:  Untitled.Rmd
+    Untracked:  Untitled.html
+    Untracked:  Untitled/
+    Untracked:  Waldron_PublicData/
+    Untracked:  ace2.html
+    Untracked:  ace2Paper.html
+    Untracked:  ace2Paper.pdf
+    Untracked:  blogwebsite/
+    Untracked:  bortezomib+cisplatin.log
+    Untracked:  bortezomib+cisplatin.pdf
+    Untracked:  bortezomib+cisplatin_files/
+    Untracked:  city_fig_1.png
+    Untracked:  city_fig_3.png
+    Untracked:  covid19_turkey.html
+    Untracked:  covid19_world.Rmd
+    Untracked:  covid19_world.html
+    Untracked:  covid19_world.log
+    Untracked:  covid19_world.tex
+    Untracked:  createEsetList.log
+    Untracked:  data/
+    Untracked:  dem_01.tif
+    Untracked:  erciyes1.png
+    Untracked:  erciyes10.png
+    Untracked:  erciyes100.png
+    Untracked:  erciyes101.png
+    Untracked:  erciyes102.png
+    Untracked:  erciyes103.png
+    Untracked:  erciyes104.png
+    Untracked:  erciyes105.png
+    Untracked:  erciyes106.png
+    Untracked:  erciyes107.png
+    Untracked:  erciyes108.png
+    Untracked:  erciyes109.png
+    Untracked:  erciyes11.png
+    Untracked:  erciyes110.png
+    Untracked:  erciyes111.png
+    Untracked:  erciyes112.png
+    Untracked:  erciyes113.png
+    Untracked:  erciyes114.png
+    Untracked:  erciyes115.png
+    Untracked:  erciyes116.png
+    Untracked:  erciyes117.png
+    Untracked:  erciyes118.png
+    Untracked:  erciyes119.png
+    Untracked:  erciyes12.png
+    Untracked:  erciyes120.png
+    Untracked:  erciyes121.png
+    Untracked:  erciyes122.png
+    Untracked:  erciyes123.png
+    Untracked:  erciyes124.png
+    Untracked:  erciyes125.png
+    Untracked:  erciyes126.png
+    Untracked:  erciyes127.png
+    Untracked:  erciyes128.png
+    Untracked:  erciyes129.png
+    Untracked:  erciyes13.png
+    Untracked:  erciyes130.png
+    Untracked:  erciyes131.png
+    Untracked:  erciyes132.png
+    Untracked:  erciyes133.png
+    Untracked:  erciyes134.png
+    Untracked:  erciyes135.png
+    Untracked:  erciyes136.png
+    Untracked:  erciyes137.png
+    Untracked:  erciyes138.png
+    Untracked:  erciyes139.png
+    Untracked:  erciyes14.png
+    Untracked:  erciyes140.png
+    Untracked:  erciyes141.png
+    Untracked:  erciyes142.png
+    Untracked:  erciyes143.png
+    Untracked:  erciyes144.png
+    Untracked:  erciyes145.png
+    Untracked:  erciyes146.png
+    Untracked:  erciyes147.png
+    Untracked:  erciyes148.png
+    Untracked:  erciyes149.png
+    Untracked:  erciyes15.png
+    Untracked:  erciyes150.png
+    Untracked:  erciyes151.png
+    Untracked:  erciyes152.png
+    Untracked:  erciyes153.png
+    Untracked:  erciyes154.png
+    Untracked:  erciyes155.png
+    Untracked:  erciyes156.png
+    Untracked:  erciyes157.png
+    Untracked:  erciyes158.png
+    Untracked:  erciyes159.png
+    Untracked:  erciyes16.png
+    Untracked:  erciyes160.png
+    Untracked:  erciyes161.png
+    Untracked:  erciyes162.png
+    Untracked:  erciyes163.png
+    Untracked:  erciyes164.png
+    Untracked:  erciyes165.png
+    Untracked:  erciyes166.png
+    Untracked:  erciyes167.png
+    Untracked:  erciyes168.png
+    Untracked:  erciyes169.png
+    Untracked:  erciyes17.png
+    Untracked:  erciyes170.png
+    Untracked:  erciyes171.png
+    Untracked:  erciyes172.png
+    Untracked:  erciyes173.png
+    Untracked:  erciyes174.png
+    Untracked:  erciyes175.png
+    Untracked:  erciyes176.png
+    Untracked:  erciyes177.png
+    Untracked:  erciyes178.png
+    Untracked:  erciyes179.png
+    Untracked:  erciyes18.png
+    Untracked:  erciyes180.png
+    Untracked:  erciyes181.png
+    Untracked:  erciyes182.png
+    Untracked:  erciyes183.png
+    Untracked:  erciyes184.png
+    Untracked:  erciyes185.png
+    Untracked:  erciyes186.png
+    Untracked:  erciyes187.png
+    Untracked:  erciyes188.png
+    Untracked:  erciyes189.png
+    Untracked:  erciyes19.png
+    Untracked:  erciyes190.png
+    Untracked:  erciyes191.png
+    Untracked:  erciyes192.png
+    Untracked:  erciyes193.png
+    Untracked:  erciyes194.png
+    Untracked:  erciyes195.png
+    Untracked:  erciyes196.png
+    Untracked:  erciyes197.png
+    Untracked:  erciyes198.png
+    Untracked:  erciyes199.png
+    Untracked:  erciyes2.png
+    Untracked:  erciyes20.png
+    Untracked:  erciyes200.png
+    Untracked:  erciyes201.png
+    Untracked:  erciyes202.png
+    Untracked:  erciyes203.png
+    Untracked:  erciyes204.png
+    Untracked:  erciyes205.png
+    Untracked:  erciyes206.png
+    Untracked:  erciyes207.png
+    Untracked:  erciyes208.png
+    Untracked:  erciyes209.png
+    Untracked:  erciyes21.png
+    Untracked:  erciyes210.png
+    Untracked:  erciyes211.png
+    Untracked:  erciyes212.png
+    Untracked:  erciyes213.png
+    Untracked:  erciyes214.png
+    Untracked:  erciyes215.png
+    Untracked:  erciyes216.png
+    Untracked:  erciyes217.png
+    Untracked:  erciyes218.png
+    Untracked:  erciyes219.png
+    Untracked:  erciyes22.png
+    Untracked:  erciyes220.png
+    Untracked:  erciyes221.png
+    Untracked:  erciyes222.png
+    Untracked:  erciyes223.png
+    Untracked:  erciyes224.png
+    Untracked:  erciyes225.png
+    Untracked:  erciyes226.png
+    Untracked:  erciyes227.png
+    Untracked:  erciyes228.png
+    Untracked:  erciyes229.png
+    Untracked:  erciyes23.png
+    Untracked:  erciyes230.png
+    Untracked:  erciyes231.png
+    Untracked:  erciyes232.png
+    Untracked:  erciyes233.png
+    Untracked:  erciyes234.png
+    Untracked:  erciyes235.png
+    Untracked:  erciyes236.png
+    Untracked:  erciyes237.png
+    Untracked:  erciyes238.png
+    Untracked:  erciyes239.png
+    Untracked:  erciyes24.png
+    Untracked:  erciyes240.png
+    Untracked:  erciyes241.png
+    Untracked:  erciyes242.png
+    Untracked:  erciyes243.png
+    Untracked:  erciyes244.png
+    Untracked:  erciyes245.png
+    Untracked:  erciyes246.png
+    Untracked:  erciyes247.png
+    Untracked:  erciyes248.png
+    Untracked:  erciyes249.png
+    Untracked:  erciyes25.png
+    Untracked:  erciyes250.png
+    Untracked:  erciyes251.png
+    Untracked:  erciyes252.png
+    Untracked:  erciyes253.png
+    Untracked:  erciyes254.png
+    Untracked:  erciyes255.png
+    Untracked:  erciyes256.png
+    Untracked:  erciyes257.png
+    Untracked:  erciyes258.png
+    Untracked:  erciyes259.png
+    Untracked:  erciyes26.png
+    Untracked:  erciyes260.png
+    Untracked:  erciyes261.png
+    Untracked:  erciyes262.png
+    Untracked:  erciyes263.png
+    Untracked:  erciyes264.png
+    Untracked:  erciyes265.png
+    Untracked:  erciyes266.png
+    Untracked:  erciyes267.png
+    Untracked:  erciyes268.png
+    Untracked:  erciyes269.png
+    Untracked:  erciyes27.png
+    Untracked:  erciyes270.png
+    Untracked:  erciyes271.png
+    Untracked:  erciyes272.png
+    Untracked:  erciyes273.png
+    Untracked:  erciyes274.png
+    Untracked:  erciyes275.png
+    Untracked:  erciyes276.png
+    Untracked:  erciyes277.png
+    Untracked:  erciyes278.png
+    Untracked:  erciyes279.png
+    Untracked:  erciyes28.png
+    Untracked:  erciyes280.png
+    Untracked:  erciyes281.png
+    Untracked:  erciyes282.png
+    Untracked:  erciyes283.png
+    Untracked:  erciyes284.png
+    Untracked:  erciyes285.png
+    Untracked:  erciyes286.png
+    Untracked:  erciyes287.png
+    Untracked:  erciyes288.png
+    Untracked:  erciyes289.png
+    Untracked:  erciyes29.png
+    Untracked:  erciyes290.png
+    Untracked:  erciyes291.png
+    Untracked:  erciyes292.png
+    Untracked:  erciyes293.png
+    Untracked:  erciyes294.png
+    Untracked:  erciyes295.png
+    Untracked:  erciyes296.png
+    Untracked:  erciyes297.png
+    Untracked:  erciyes298.png
+    Untracked:  erciyes299.png
+    Untracked:  erciyes3.png
+    Untracked:  erciyes30.png
+    Untracked:  erciyes300.png
+    Untracked:  erciyes301.png
+    Untracked:  erciyes302.png
+    Untracked:  erciyes303.png
+    Untracked:  erciyes304.png
+    Untracked:  erciyes305.png
+    Untracked:  erciyes306.png
+    Untracked:  erciyes307.png
+    Untracked:  erciyes308.png
+    Untracked:  erciyes309.png
+    Untracked:  erciyes31.png
+    Untracked:  erciyes310.png
+    Untracked:  erciyes311.png
+    Untracked:  erciyes312.png
+    Untracked:  erciyes313.png
+    Untracked:  erciyes314.png
+    Untracked:  erciyes315.png
+    Untracked:  erciyes316.png
+    Untracked:  erciyes317.png
+    Untracked:  erciyes318.png
+    Untracked:  erciyes319.png
+    Untracked:  erciyes32.png
+    Untracked:  erciyes320.png
+    Untracked:  erciyes321.png
+    Untracked:  erciyes322.png
+    Untracked:  erciyes323.png
+    Untracked:  erciyes324.png
+    Untracked:  erciyes325.png
+    Untracked:  erciyes326.png
+    Untracked:  erciyes327.png
+    Untracked:  erciyes328.png
+    Untracked:  erciyes329.png
+    Untracked:  erciyes33.png
+    Untracked:  erciyes330.png
+    Untracked:  erciyes331.png
+    Untracked:  erciyes332.png
+    Untracked:  erciyes333.png
+    Untracked:  erciyes334.png
+    Untracked:  erciyes335.png
+    Untracked:  erciyes336.png
+    Untracked:  erciyes337.png
+    Untracked:  erciyes338.png
+    Untracked:  erciyes339.png
+    Untracked:  erciyes34.png
+    Untracked:  erciyes340.png
+    Untracked:  erciyes341.png
+    Untracked:  erciyes342.png
+    Untracked:  erciyes343.png
+    Untracked:  erciyes344.png
+    Untracked:  erciyes345.png
+    Untracked:  erciyes346.png
+    Untracked:  erciyes347.png
+    Untracked:  erciyes348.png
+    Untracked:  erciyes349.png
+    Untracked:  erciyes35.png
+    Untracked:  erciyes350.png
+    Untracked:  erciyes351.png
+    Untracked:  erciyes352.png
+    Untracked:  erciyes353.png
+    Untracked:  erciyes354.png
+    Untracked:  erciyes355.png
+    Untracked:  erciyes356.png
+    Untracked:  erciyes357.png
+    Untracked:  erciyes358.png
+    Untracked:  erciyes359.png
+    Untracked:  erciyes36.png
+    Untracked:  erciyes360.png
+    Untracked:  erciyes361.png
+    Untracked:  erciyes362.png
+    Untracked:  erciyes363.png
+    Untracked:  erciyes364.png
+    Untracked:  erciyes365.png
+    Untracked:  erciyes366.png
+    Untracked:  erciyes367.png
+    Untracked:  erciyes368.png
+    Untracked:  erciyes369.png
+    Untracked:  erciyes37.png
+    Untracked:  erciyes370.png
+    Untracked:  erciyes371.png
+    Untracked:  erciyes372.png
+    Untracked:  erciyes373.png
+    Untracked:  erciyes374.png
+    Untracked:  erciyes375.png
+    Untracked:  erciyes376.png
+    Untracked:  erciyes377.png
+    Untracked:  erciyes378.png
+    Untracked:  erciyes379.png
+    Untracked:  erciyes38.png
+    Untracked:  erciyes380.png
+    Untracked:  erciyes381.png
+    Untracked:  erciyes382.png
+    Untracked:  erciyes383.png
+    Untracked:  erciyes384.png
+    Untracked:  erciyes385.png
+    Untracked:  erciyes386.png
+    Untracked:  erciyes387.png
+    Untracked:  erciyes388.png
+    Untracked:  erciyes389.png
+    Untracked:  erciyes39.png
+    Untracked:  erciyes390.png
+    Untracked:  erciyes391.png
+    Untracked:  erciyes392.png
+    Untracked:  erciyes393.png
+    Untracked:  erciyes394.png
+    Untracked:  erciyes395.png
+    Untracked:  erciyes396.png
+    Untracked:  erciyes397.png
+    Untracked:  erciyes398.png
+    Untracked:  erciyes399.png
+    Untracked:  erciyes4.png
+    Untracked:  erciyes40.png
+    Untracked:  erciyes400.png
+    Untracked:  erciyes401.png
+    Untracked:  erciyes402.png
+    Untracked:  erciyes403.png
+    Untracked:  erciyes404.png
+    Untracked:  erciyes405.png
+    Untracked:  erciyes406.png
+    Untracked:  erciyes407.png
+    Untracked:  erciyes408.png
+    Untracked:  erciyes409.png
+    Untracked:  erciyes41.png
+    Untracked:  erciyes410.png
+    Untracked:  erciyes411.png
+    Untracked:  erciyes412.png
+    Untracked:  erciyes413.png
+    Untracked:  erciyes414.png
+    Untracked:  erciyes415.png
+    Untracked:  erciyes416.png
+    Untracked:  erciyes417.png
+    Untracked:  erciyes418.png
+    Untracked:  erciyes419.png
+    Untracked:  erciyes42.png
+    Untracked:  erciyes420.png
+    Untracked:  erciyes421.png
+    Untracked:  erciyes422.png
+    Untracked:  erciyes423.png
+    Untracked:  erciyes424.png
+    Untracked:  erciyes425.png
+    Untracked:  erciyes426.png
+    Untracked:  erciyes427.png
+    Untracked:  erciyes428.png
+    Untracked:  erciyes429.png
+    Untracked:  erciyes43.png
+    Untracked:  erciyes430.png
+    Untracked:  erciyes431.png
+    Untracked:  erciyes432.png
+    Untracked:  erciyes433.png
+    Untracked:  erciyes434.png
+    Untracked:  erciyes435.png
+    Untracked:  erciyes436.png
+    Untracked:  erciyes437.png
+    Untracked:  erciyes438.png
+    Untracked:  erciyes439.png
+    Untracked:  erciyes44.png
+    Untracked:  erciyes440.png
+    Untracked:  erciyes441.png
+    Untracked:  erciyes442.png
+    Untracked:  erciyes443.png
+    Untracked:  erciyes444.png
+    Untracked:  erciyes445.png
+    Untracked:  erciyes446.png
+    Untracked:  erciyes447.png
+    Untracked:  erciyes448.png
+    Untracked:  erciyes449.png
+    Untracked:  erciyes45.png
+    Untracked:  erciyes450.png
+    Untracked:  erciyes451.png
+    Untracked:  erciyes452.png
+    Untracked:  erciyes453.png
+    Untracked:  erciyes454.png
+    Untracked:  erciyes455.png
+    Untracked:  erciyes456.png
+    Untracked:  erciyes457.png
+    Untracked:  erciyes458.png
+    Untracked:  erciyes459.png
+    Untracked:  erciyes46.png
+    Untracked:  erciyes460.png
+    Untracked:  erciyes461.png
+    Untracked:  erciyes462.png
+    Untracked:  erciyes463.png
+    Untracked:  erciyes464.png
+    Untracked:  erciyes465.png
+    Untracked:  erciyes466.png
+    Untracked:  erciyes467.png
+    Untracked:  erciyes468.png
+    Untracked:  erciyes469.png
+    Untracked:  erciyes47.png
+    Untracked:  erciyes470.png
+    Untracked:  erciyes471.png
+    Untracked:  erciyes472.png
+    Untracked:  erciyes473.png
+    Untracked:  erciyes474.png
+    Untracked:  erciyes475.png
+    Untracked:  erciyes476.png
+    Untracked:  erciyes477.png
+    Untracked:  erciyes478.png
+    Untracked:  erciyes479.png
+    Untracked:  erciyes48.png
+    Untracked:  erciyes480.png
+    Untracked:  erciyes481.png
+    Untracked:  erciyes482.png
+    Untracked:  erciyes483.png
+    Untracked:  erciyes484.png
+    Untracked:  erciyes485.png
+    Untracked:  erciyes486.png
+    Untracked:  erciyes487.png
+    Untracked:  erciyes488.png
+    Untracked:  erciyes489.png
+    Untracked:  erciyes49.png
+    Untracked:  erciyes490.png
+    Untracked:  erciyes491.png
+    Untracked:  erciyes492.png
+    Untracked:  erciyes493.png
+    Untracked:  erciyes494.png
+    Untracked:  erciyes495.png
+    Untracked:  erciyes496.png
+    Untracked:  erciyes497.png
+    Untracked:  erciyes498.png
+    Untracked:  erciyes499.png
+    Untracked:  erciyes5.png
+    Untracked:  erciyes50.png
+    Untracked:  erciyes500.png
+    Untracked:  erciyes501.png
+    Untracked:  erciyes502.png
+    Untracked:  erciyes503.png
+    Untracked:  erciyes504.png
+    Untracked:  erciyes505.png
+    Untracked:  erciyes506.png
+    Untracked:  erciyes507.png
+    Untracked:  erciyes508.png
+    Untracked:  erciyes509.png
+    Untracked:  erciyes51.png
+    Untracked:  erciyes510.png
+    Untracked:  erciyes511.png
+    Untracked:  erciyes512.png
+    Untracked:  erciyes513.png
+    Untracked:  erciyes514.png
+    Untracked:  erciyes515.png
+    Untracked:  erciyes516.png
+    Untracked:  erciyes517.png
+    Untracked:  erciyes518.png
+    Untracked:  erciyes519.png
+    Untracked:  erciyes52.png
+    Untracked:  erciyes520.png
+    Untracked:  erciyes521.png
+    Untracked:  erciyes522.png
+    Untracked:  erciyes523.png
+    Untracked:  erciyes524.png
+    Untracked:  erciyes525.png
+    Untracked:  erciyes526.png
+    Untracked:  erciyes527.png
+    Untracked:  erciyes528.png
+    Untracked:  erciyes529.png
+    Untracked:  erciyes53.png
+    Untracked:  erciyes530.png
+    Untracked:  erciyes531.png
+    Untracked:  erciyes532.png
+    Untracked:  erciyes533.png
+    Untracked:  erciyes534.png
+    Untracked:  erciyes535.png
+    Untracked:  erciyes536.png
+    Untracked:  erciyes537.png
+    Untracked:  erciyes538.png
+    Untracked:  erciyes539.png
+    Untracked:  erciyes54.png
+    Untracked:  erciyes540.png
+    Untracked:  erciyes541.png
+    Untracked:  erciyes542.png
+    Untracked:  erciyes543.png
+    Untracked:  erciyes544.png
+    Untracked:  erciyes545.png
+    Untracked:  erciyes546.png
+    Untracked:  erciyes547.png
+    Untracked:  erciyes548.png
+    Untracked:  erciyes549.png
+    Untracked:  erciyes55.png
+    Untracked:  erciyes550.png
+    Untracked:  erciyes551.png
+    Untracked:  erciyes552.png
+    Untracked:  erciyes553.png
+    Untracked:  erciyes554.png
+    Untracked:  erciyes555.png
+    Untracked:  erciyes556.png
+    Untracked:  erciyes557.png
+    Untracked:  erciyes558.png
+    Untracked:  erciyes559.png
+    Untracked:  erciyes56.png
+    Untracked:  erciyes560.png
+    Untracked:  erciyes561.png
+    Untracked:  erciyes562.png
+    Untracked:  erciyes563.png
+    Untracked:  erciyes564.png
+    Untracked:  erciyes565.png
+    Untracked:  erciyes566.png
+    Untracked:  erciyes567.png
+    Untracked:  erciyes568.png
+    Untracked:  erciyes569.png
+    Untracked:  erciyes57.png
+    Untracked:  erciyes570.png
+    Untracked:  erciyes571.png
+    Untracked:  erciyes572.png
+    Untracked:  erciyes573.png
+    Untracked:  erciyes574.png
+    Untracked:  erciyes575.png
+    Untracked:  erciyes576.png
+    Untracked:  erciyes577.png
+    Untracked:  erciyes578.png
+    Untracked:  erciyes579.png
+    Untracked:  erciyes58.png
+    Untracked:  erciyes580.png
+    Untracked:  erciyes581.png
+    Untracked:  erciyes582.png
+    Untracked:  erciyes583.png
+    Untracked:  erciyes584.png
+    Untracked:  erciyes585.png
+    Untracked:  erciyes586.png
+    Untracked:  erciyes587.png
+    Untracked:  erciyes59.png
+    Untracked:  erciyes6.png
+    Untracked:  erciyes60.png
+    Untracked:  erciyes61.png
+    Untracked:  erciyes62.png
+    Untracked:  erciyes63.png
+    Untracked:  erciyes64.png
+    Untracked:  erciyes65.png
+    Untracked:  erciyes66.png
+    Untracked:  erciyes67.png
+    Untracked:  erciyes68.png
+    Untracked:  erciyes69.png
+    Untracked:  erciyes7.png
+    Untracked:  erciyes70.png
+    Untracked:  erciyes71.png
+    Untracked:  erciyes72.png
+    Untracked:  erciyes73.png
+    Untracked:  erciyes74.png
+    Untracked:  erciyes75.png
+    Untracked:  erciyes76.png
+    Untracked:  erciyes77.png
+    Untracked:  erciyes78.png
+    Untracked:  erciyes79.png
+    Untracked:  erciyes8.png
+    Untracked:  erciyes80.png
+    Untracked:  erciyes81.png
+    Untracked:  erciyes82.png
+    Untracked:  erciyes83.png
+    Untracked:  erciyes84.png
+    Untracked:  erciyes85.png
+    Untracked:  erciyes86.png
+    Untracked:  erciyes87.png
+    Untracked:  erciyes88.png
+    Untracked:  erciyes89.png
+    Untracked:  erciyes9.png
+    Untracked:  erciyes90.png
+    Untracked:  erciyes91.png
+    Untracked:  erciyes92.png
+    Untracked:  erciyes93.png
+    Untracked:  erciyes94.png
+    Untracked:  erciyes95.png
+    Untracked:  erciyes96.png
+    Untracked:  erciyes97.png
+    Untracked:  erciyes98.png
+    Untracked:  erciyes99.png
+    Untracked:  excel'den_R'a.R
+    Untracked:  f2.png
+    Untracked:  fig1.tiff
+    Untracked:  fig10.png
+    Untracked:  fig3.png
+    Untracked:  fig5.png
+    Untracked:  fig7.png
+    Untracked:  figure1.tiff
+    Untracked:  figure2.tiff
+    Untracked:  figure3.tiff
+    Untracked:  figure4.tiff
+    Untracked:  figür.tiff
+    Untracked:  fungi.html
+    Untracked:  g8.png
+    Untracked:  gadm36_ESP_1_sp.rds
+    Untracked:  group_means
+    Untracked:  hivc.jpeg
+    Untracked:  make
+    Untracked:  my_poster/
+    Untracked:  mydoc.Rmd
+    Untracked:  mydoc.nb.html
+    Untracked:  mydoc2.Rmd
+    Untracked:  mydoc2.tex
+    Untracked:  mydoc3_knitted.Rmd
+    Untracked:  mydoc3_knitted.html
+    Untracked:  newpaper.pdf
+    Untracked:  opt/
+    Untracked:  spark/
+    Untracked:  tmin_june.tif
+    Untracked:  tmp-pdfcrop-27090.tex
+    Untracked:  total_distance_of_a_city_to_all_other_cities_in_a_country.Rmd
+    Untracked:  total_distance_of_a_city_to_all_other_cities_in_a_country.html
+    Untracked:  total_distance_of_a_city_to_all_other_cities_in_a_country.pdf
+    Untracked:  tr_cities_en.Rmd
+    Untracked:  tr_cities_en.html
+    Untracked:  treated_vs_untreated.csv
+    Untracked:  trial2.emf
+    Untracked:  trial2.emf.2019-04-30_16-48-23.log
+    Untracked:  wc5/
+    Untracked:  zionpark1.png
+    Untracked:  zionpark10.png
+    Untracked:  zionpark100.png
+    Untracked:  zionpark1000.png
+    Untracked:  zionpark1001.png
+    Untracked:  zionpark1002.png
+    Untracked:  zionpark1003.png
+    Untracked:  zionpark1004.png
+    Untracked:  zionpark1005.png
+    Untracked:  zionpark1006.png
+    Untracked:  zionpark1007.png
+    Untracked:  zionpark1008.png
+    Untracked:  zionpark1009.png
+    Untracked:  zionpark101.png
+    Untracked:  zionpark1010.png
+    Untracked:  zionpark1011.png
+    Untracked:  zionpark1012.png
+    Untracked:  zionpark1013.png
+    Untracked:  zionpark1014.png
+    Untracked:  zionpark1015.png
+    Untracked:  zionpark1016.png
+    Untracked:  zionpark1017.png
+    Untracked:  zionpark1018.png
+    Untracked:  zionpark1019.png
+    Untracked:  zionpark102.png
+    Untracked:  zionpark1020.png
+    Untracked:  zionpark1021.png
+    Untracked:  zionpark1022.png
+    Untracked:  zionpark1023.png
+    Untracked:  zionpark1024.png
+    Untracked:  zionpark1025.png
+    Untracked:  zionpark1026.png
+    Untracked:  zionpark1027.png
+    Untracked:  zionpark1028.png
+    Untracked:  zionpark1029.png
+    Untracked:  zionpark103.png
+    Untracked:  zionpark1030.png
+    Untracked:  zionpark1031.png
+    Untracked:  zionpark1032.png
+    Untracked:  zionpark1033.png
+    Untracked:  zionpark1034.png
+    Untracked:  zionpark1035.png
+    Untracked:  zionpark1036.png
+    Untracked:  zionpark1037.png
+    Untracked:  zionpark1038.png
+    Untracked:  zionpark1039.png
+    Untracked:  zionpark104.png
+    Untracked:  zionpark1040.png
+    Untracked:  zionpark1041.png
+    Untracked:  zionpark1042.png
+    Untracked:  zionpark1043.png
+    Untracked:  zionpark1044.png
+    Untracked:  zionpark1045.png
+    Untracked:  zionpark1046.png
+    Untracked:  zionpark1047.png
+    Untracked:  zionpark1048.png
+    Untracked:  zionpark1049.png
+    Untracked:  zionpark105.png
+    Untracked:  zionpark1050.png
+    Untracked:  zionpark1051.png
+    Untracked:  zionpark1052.png
+    Untracked:  zionpark1053.png
+    Untracked:  zionpark1054.png
+    Untracked:  zionpark1055.png
+    Untracked:  zionpark1056.png
+    Untracked:  zionpark1057.png
+    Untracked:  zionpark1058.png
+    Untracked:  zionpark1059.png
+    Untracked:  zionpark106.png
+    Untracked:  zionpark1060.png
+    Untracked:  zionpark1061.png
+    Untracked:  zionpark1062.png
+    Untracked:  zionpark1063.png
+    Untracked:  zionpark1064.png
+    Untracked:  zionpark1065.png
+    Untracked:  zionpark1066.png
+    Untracked:  zionpark1067.png
+    Untracked:  zionpark1068.png
+    Untracked:  zionpark1069.png
+    Untracked:  zionpark107.png
+    Untracked:  zionpark1070.png
+    Untracked:  zionpark1071.png
+    Untracked:  zionpark1072.png
+    Untracked:  zionpark1073.png
+    Untracked:  zionpark1074.png
+    Untracked:  zionpark1075.png
+    Untracked:  zionpark1076.png
+    Untracked:  zionpark1077.png
+    Untracked:  zionpark1078.png
+    Untracked:  zionpark1079.png
+    Untracked:  zionpark108.png
+    Untracked:  zionpark1080.png
+    Untracked:  zionpark1081.png
+    Untracked:  zionpark1082.png
+    Untracked:  zionpark1083.png
+    Untracked:  zionpark1084.png
+    Untracked:  zionpark1085.png
+    Untracked:  zionpark1086.png
+    Untracked:  zionpark1087.png
+    Untracked:  zionpark1088.png
+    Untracked:  zionpark1089.png
+    Untracked:  zionpark109.png
+    Untracked:  zionpark1090.png
+    Untracked:  zionpark1091.png
+    Untracked:  zionpark1092.png
+    Untracked:  zionpark1093.png
+    Untracked:  zionpark1094.png
+    Untracked:  zionpark1095.png
+    Untracked:  zionpark1096.png
+    Untracked:  zionpark1097.png
+    Untracked:  zionpark1098.png
+    Untracked:  zionpark1099.png
+    Untracked:  zionpark11.png
+    Untracked:  zionpark110.png
+    Untracked:  zionpark1100.png
+    Untracked:  zionpark1101.png
+    Untracked:  zionpark1102.png
+    Untracked:  zionpark1103.png
+    Untracked:  zionpark1104.png
+    Untracked:  zionpark1105.png
+    Untracked:  zionpark1106.png
+    Untracked:  zionpark1107.png
+    Untracked:  zionpark1108.png
+    Untracked:  zionpark1109.png
+    Untracked:  zionpark111.png
+    Untracked:  zionpark1110.png
+    Untracked:  zionpark1111.png
+    Untracked:  zionpark1112.png
+    Untracked:  zionpark1113.png
+    Untracked:  zionpark1114.png
+    Untracked:  zionpark1115.png
+    Untracked:  zionpark1116.png
+    Untracked:  zionpark1117.png
+    Untracked:  zionpark1118.png
+    Untracked:  zionpark1119.png
+    Untracked:  zionpark112.png
+    Untracked:  zionpark1120.png
+    Untracked:  zionpark1121.png
+    Untracked:  zionpark1122.png
+    Untracked:  zionpark1123.png
+    Untracked:  zionpark1124.png
+    Untracked:  zionpark1125.png
+    Untracked:  zionpark1126.png
+    Untracked:  zionpark1127.png
+    Untracked:  zionpark1128.png
+    Untracked:  zionpark1129.png
+    Untracked:  zionpark113.png
+    Untracked:  zionpark1130.png
+    Untracked:  zionpark1131.png
+    Untracked:  zionpark1132.png
+    Untracked:  zionpark1133.png
+    Untracked:  zionpark1134.png
+    Untracked:  zionpark1135.png
+    Untracked:  zionpark1136.png
+    Untracked:  zionpark1137.png
+    Untracked:  zionpark1138.png
+    Untracked:  zionpark1139.png
+    Untracked:  zionpark114.png
+    Untracked:  zionpark1140.png
+    Untracked:  zionpark1141.png
+    Untracked:  zionpark1142.png
+    Untracked:  zionpark1143.png
+    Untracked:  zionpark1144.png
+    Untracked:  zionpark1145.png
+    Untracked:  zionpark1146.png
+    Untracked:  zionpark1147.png
+    Untracked:  zionpark1148.png
+    Untracked:  zionpark1149.png
+    Untracked:  zionpark115.png
+    Untracked:  zionpark1150.png
+    Untracked:  zionpark1151.png
+    Untracked:  zionpark1152.png
+    Untracked:  zionpark1153.png
+    Untracked:  zionpark1154.png
+    Untracked:  zionpark1155.png
+    Untracked:  zionpark1156.png
+    Untracked:  zionpark1157.png
+    Untracked:  zionpark1158.png
+    Untracked:  zionpark1159.png
+    Untracked:  zionpark116.png
+    Untracked:  zionpark1160.png
+    Untracked:  zionpark1161.png
+    Untracked:  zionpark1162.png
+    Untracked:  zionpark1163.png
+    Untracked:  zionpark1164.png
+    Untracked:  zionpark1165.png
+    Untracked:  zionpark1166.png
+    Untracked:  zionpark1167.png
+    Untracked:  zionpark1168.png
+    Untracked:  zionpark1169.png
+    Untracked:  zionpark117.png
+    Untracked:  zionpark1170.png
+    Untracked:  zionpark1171.png
+    Untracked:  zionpark1172.png
+    Untracked:  zionpark1173.png
+    Untracked:  zionpark1174.png
+    Untracked:  zionpark1175.png
+    Untracked:  zionpark1176.png
+    Untracked:  zionpark1177.png
+    Untracked:  zionpark1178.png
+    Untracked:  zionpark1179.png
+    Untracked:  zionpark118.png
+    Untracked:  zionpark1180.png
+    Untracked:  zionpark1181.png
+    Untracked:  zionpark1182.png
+    Untracked:  zionpark1183.png
+    Untracked:  zionpark1184.png
+    Untracked:  zionpark1185.png
+    Untracked:  zionpark1186.png
+    Untracked:  zionpark1187.png
+    Untracked:  zionpark1188.png
+    Untracked:  zionpark1189.png
+    Untracked:  zionpark119.png
+    Untracked:  zionpark1190.png
+    Untracked:  zionpark1191.png
+    Untracked:  zionpark1192.png
+    Untracked:  zionpark1193.png
+    Untracked:  zionpark1194.png
+    Untracked:  zionpark1195.png
+    Untracked:  zionpark1196.png
+    Untracked:  zionpark1197.png
+    Untracked:  zionpark1198.png
+    Untracked:  zionpark1199.png
+    Untracked:  zionpark12.png
+    Untracked:  zionpark120.png
+    Untracked:  zionpark1200.png
+    Untracked:  zionpark1201.png
+    Untracked:  zionpark1202.png
+    Untracked:  zionpark1203.png
+    Untracked:  zionpark1204.png
+    Untracked:  zionpark1205.png
+    Untracked:  zionpark1206.png
+    Untracked:  zionpark1207.png
+    Untracked:  zionpark1208.png
+    Untracked:  zionpark1209.png
+    Untracked:  zionpark121.png
+    Untracked:  zionpark1210.png
+    Untracked:  zionpark1211.png
+    Untracked:  zionpark1212.png
+    Untracked:  zionpark1213.png
+    Untracked:  zionpark1214.png
+    Untracked:  zionpark1215.png
+    Untracked:  zionpark1216.png
+    Untracked:  zionpark1217.png
+    Untracked:  zionpark1218.png
+    Untracked:  zionpark1219.png
+    Untracked:  zionpark122.png
+    Untracked:  zionpark1220.png
+    Untracked:  zionpark1221.png
+    Untracked:  zionpark1222.png
+    Untracked:  zionpark1223.png
+    Untracked:  zionpark1224.png
+    Untracked:  zionpark1225.png
+    Untracked:  zionpark1226.png
+    Untracked:  zionpark1227.png
+    Untracked:  zionpark1228.png
+    Untracked:  zionpark1229.png
+    Untracked:  zionpark123.png
+    Untracked:  zionpark1230.png
+    Untracked:  zionpark1231.png
+    Untracked:  zionpark1232.png
+    Untracked:  zionpark1233.png
+    Untracked:  zionpark1234.png
+    Untracked:  zionpark1235.png
+    Untracked:  zionpark1236.png
+    Untracked:  zionpark1237.png
+    Untracked:  zionpark1238.png
+    Untracked:  zionpark1239.png
+    Untracked:  zionpark124.png
+    Untracked:  zionpark1240.png
+    Untracked:  zionpark1241.png
+    Untracked:  zionpark1242.png
+    Untracked:  zionpark1243.png
+    Untracked:  zionpark1244.png
+    Untracked:  zionpark1245.png
+    Untracked:  zionpark1246.png
+    Untracked:  zionpark1247.png
+    Untracked:  zionpark1248.png
+    Untracked:  zionpark1249.png
+    Untracked:  zionpark125.png
+    Untracked:  zionpark1250.png
+    Untracked:  zionpark1251.png
+    Untracked:  zionpark1252.png
+    Untracked:  zionpark1253.png
+    Untracked:  zionpark1254.png
+    Untracked:  zionpark1255.png
+    Untracked:  zionpark1256.png
+    Untracked:  zionpark1257.png
+    Untracked:  zionpark1258.png
+    Untracked:  zionpark1259.png
+    Untracked:  zionpark126.png
+    Untracked:  zionpark1260.png
+    Untracked:  zionpark1261.png
+    Untracked:  zionpark1262.png
+    Untracked:  zionpark1263.png
+    Untracked:  zionpark1264.png
+    Untracked:  zionpark1265.png
+    Untracked:  zionpark1266.png
+    Untracked:  zionpark1267.png
+    Untracked:  zionpark1268.png
+    Untracked:  zionpark1269.png
+    Untracked:  zionpark127.png
+    Untracked:  zionpark1270.png
+    Untracked:  zionpark1271.png
+    Untracked:  zionpark1272.png
+    Untracked:  zionpark1273.png
+    Untracked:  zionpark1274.png
+    Untracked:  zionpark1275.png
+    Untracked:  zionpark1276.png
+    Untracked:  zionpark1277.png
+    Untracked:  zionpark1278.png
+    Untracked:  zionpark1279.png
+    Untracked:  zionpark128.png
+    Untracked:  zionpark1280.png
+    Untracked:  zionpark1281.png
+    Untracked:  zionpark1282.png
+    Untracked:  zionpark1283.png
+    Untracked:  zionpark1284.png
+    Untracked:  zionpark1285.png
+    Untracked:  zionpark1286.png
+    Untracked:  zionpark1287.png
+    Untracked:  zionpark1288.png
+    Untracked:  zionpark1289.png
+    Untracked:  zionpark129.png
+    Untracked:  zionpark1290.png
+    Untracked:  zionpark1291.png
+    Untracked:  zionpark1292.png
+    Untracked:  zionpark1293.png
+    Untracked:  zionpark1294.png
+    Untracked:  zionpark1295.png
+    Untracked:  zionpark1296.png
+    Untracked:  zionpark1297.png
+    Untracked:  zionpark1298.png
+    Untracked:  zionpark1299.png
+    Untracked:  zionpark13.png
+    Untracked:  zionpark130.png
+    Untracked:  zionpark1300.png
+    Untracked:  zionpark1301.png
+    Untracked:  zionpark1302.png
+    Untracked:  zionpark1303.png
+    Untracked:  zionpark1304.png
+    Untracked:  zionpark1305.png
+    Untracked:  zionpark1306.png
+    Untracked:  zionpark1307.png
+    Untracked:  zionpark1308.png
+    Untracked:  zionpark1309.png
+    Untracked:  zionpark131.png
+    Untracked:  zionpark1310.png
+    Untracked:  zionpark1311.png
+    Untracked:  zionpark1312.png
+    Untracked:  zionpark1313.png
+    Untracked:  zionpark1314.png
+    Untracked:  zionpark1315.png
+    Untracked:  zionpark1316.png
+    Untracked:  zionpark1317.png
+    Untracked:  zionpark1318.png
+    Untracked:  zionpark1319.png
+    Untracked:  zionpark132.png
+    Untracked:  zionpark1320.png
+    Untracked:  zionpark1321.png
+    Untracked:  zionpark1322.png
+    Untracked:  zionpark1323.png
+    Untracked:  zionpark1324.png
+    Untracked:  zionpark1325.png
+    Untracked:  zionpark1326.png
+    Untracked:  zionpark1327.png
+    Untracked:  zionpark1328.png
+    Untracked:  zionpark1329.png
+    Untracked:  zionpark133.png
+    Untracked:  zionpark1330.png
+    Untracked:  zionpark1331.png
+    Untracked:  zionpark1332.png
+    Untracked:  zionpark1333.png
+    Untracked:  zionpark1334.png
+    Untracked:  zionpark1335.png
+    Untracked:  zionpark1336.png
+    Untracked:  zionpark1337.png
+    Untracked:  zionpark1338.png
+    Untracked:  zionpark1339.png
+    Untracked:  zionpark134.png
+    Untracked:  zionpark1340.png
+    Untracked:  zionpark1341.png
+    Untracked:  zionpark1342.png
+    Untracked:  zionpark1343.png
+    Untracked:  zionpark1344.png
+    Untracked:  zionpark1345.png
+    Untracked:  zionpark1346.png
+    Untracked:  zionpark1347.png
+    Untracked:  zionpark1348.png
+    Untracked:  zionpark1349.png
+    Untracked:  zionpark135.png
+    Untracked:  zionpark1350.png
+    Untracked:  zionpark1351.png
+    Untracked:  zionpark1352.png
+    Untracked:  zionpark1353.png
+    Untracked:  zionpark1354.png
+    Untracked:  zionpark1355.png
+    Untracked:  zionpark1356.png
+    Untracked:  zionpark1357.png
+    Untracked:  zionpark1358.png
+    Untracked:  zionpark1359.png
+    Untracked:  zionpark136.png
+    Untracked:  zionpark1360.png
+    Untracked:  zionpark1361.png
+    Untracked:  zionpark1362.png
+    Untracked:  zionpark1363.png
+    Untracked:  zionpark1364.png
+    Untracked:  zionpark1365.png
+    Untracked:  zionpark1366.png
+    Untracked:  zionpark1367.png
+    Untracked:  zionpark1368.png
+    Untracked:  zionpark1369.png
+    Untracked:  zionpark137.png
+    Untracked:  zionpark1370.png
+    Untracked:  zionpark1371.png
+    Untracked:  zionpark1372.png
+    Untracked:  zionpark1373.png
+    Untracked:  zionpark1374.png
+    Untracked:  zionpark1375.png
+    Untracked:  zionpark1376.png
+    Untracked:  zionpark1377.png
+    Untracked:  zionpark1378.png
+    Untracked:  zionpark1379.png
+    Untracked:  zionpark138.png
+    Untracked:  zionpark1380.png
+    Untracked:  zionpark1381.png
+    Untracked:  zionpark1382.png
+    Untracked:  zionpark1383.png
+    Untracked:  zionpark1384.png
+    Untracked:  zionpark1385.png
+    Untracked:  zionpark1386.png
+    Untracked:  zionpark1387.png
+    Untracked:  zionpark1388.png
+    Untracked:  zionpark1389.png
+    Untracked:  zionpark139.png
+    Untracked:  zionpark1390.png
+    Untracked:  zionpark1391.png
+    Untracked:  zionpark1392.png
+    Untracked:  zionpark1393.png
+    Untracked:  zionpark1394.png
+    Untracked:  zionpark1395.png
+    Untracked:  zionpark1396.png
+    Untracked:  zionpark1397.png
+    Untracked:  zionpark1398.png
+    Untracked:  zionpark1399.png
+    Untracked:  zionpark14.png
+    Untracked:  zionpark140.png
+    Untracked:  zionpark1400.png
+    Untracked:  zionpark1401.png
+    Untracked:  zionpark1402.png
+    Untracked:  zionpark1403.png
+    Untracked:  zionpark1404.png
+    Untracked:  zionpark1405.png
+    Untracked:  zionpark1406.png
+    Untracked:  zionpark1407.png
+    Untracked:  zionpark1408.png
+    Untracked:  zionpark1409.png
+    Untracked:  zionpark141.png
+    Untracked:  zionpark1410.png
+    Untracked:  zionpark1411.png
+    Untracked:  zionpark1412.png
+    Untracked:  zionpark1413.png
+    Untracked:  zionpark1414.png
+    Untracked:  zionpark1415.png
+    Untracked:  zionpark1416.png
+    Untracked:  zionpark1417.png
+    Untracked:  zionpark1418.png
+    Untracked:  zionpark1419.png
+    Untracked:  zionpark142.png
+    Untracked:  zionpark1420.png
+    Untracked:  zionpark1421.png
+    Untracked:  zionpark1422.png
+    Untracked:  zionpark1423.png
+    Untracked:  zionpark1424.png
+    Untracked:  zionpark1425.png
+    Untracked:  zionpark1426.png
+    Untracked:  zionpark1427.png
+    Untracked:  zionpark1428.png
+    Untracked:  zionpark1429.png
+    Untracked:  zionpark143.png
+    Untracked:  zionpark1430.png
+    Untracked:  zionpark1431.png
+    Untracked:  zionpark1432.png
+    Untracked:  zionpark1433.png
+    Untracked:  zionpark1434.png
+    Untracked:  zionpark1435.png
+    Untracked:  zionpark1436.png
+    Untracked:  zionpark1437.png
+    Untracked:  zionpark1438.png
+    Untracked:  zionpark1439.png
+    Untracked:  zionpark144.png
+    Untracked:  zionpark1440.png
+    Untracked:  zionpark145.png
+    Untracked:  zionpark146.png
+    Untracked:  zionpark147.png
+    Untracked:  zionpark148.png
+    Untracked:  zionpark149.png
+    Untracked:  zionpark15.png
+    Untracked:  zionpark150.png
+    Untracked:  zionpark151.png
+    Untracked:  zionpark152.png
+    Untracked:  zionpark153.png
+    Untracked:  zionpark154.png
+    Untracked:  zionpark155.png
+    Untracked:  zionpark156.png
+    Untracked:  zionpark157.png
+    Untracked:  zionpark158.png
+    Untracked:  zionpark159.png
+    Untracked:  zionpark16.png
+    Untracked:  zionpark160.png
+    Untracked:  zionpark161.png
+    Untracked:  zionpark162.png
+    Untracked:  zionpark163.png
+    Untracked:  zionpark164.png
+    Untracked:  zionpark165.png
+    Untracked:  zionpark166.png
+    Untracked:  zionpark167.png
+    Untracked:  zionpark168.png
+    Untracked:  zionpark169.png
+    Untracked:  zionpark17.png
+    Untracked:  zionpark170.png
+    Untracked:  zionpark171.png
+    Untracked:  zionpark172.png
+    Untracked:  zionpark173.png
+    Untracked:  zionpark174.png
+    Untracked:  zionpark175.png
+    Untracked:  zionpark176.png
+    Untracked:  zionpark177.png
+    Untracked:  zionpark178.png
+    Untracked:  zionpark179.png
+    Untracked:  zionpark18.png
+    Untracked:  zionpark180.png
+    Untracked:  zionpark181.png
+    Untracked:  zionpark182.png
+    Untracked:  zionpark183.png
+    Untracked:  zionpark184.png
+    Untracked:  zionpark185.png
+    Untracked:  zionpark186.png
+    Untracked:  zionpark187.png
+    Untracked:  zionpark188.png
+    Untracked:  zionpark189.png
+    Untracked:  zionpark19.png
+    Untracked:  zionpark190.png
+    Untracked:  zionpark191.png
+    Untracked:  zionpark192.png
+    Untracked:  zionpark193.png
+    Untracked:  zionpark194.png
+    Untracked:  zionpark195.png
+    Untracked:  zionpark196.png
+    Untracked:  zionpark197.png
+    Untracked:  zionpark198.png
+    Untracked:  zionpark199.png
+    Untracked:  zionpark2.png
+    Untracked:  zionpark20.png
+    Untracked:  zionpark200.png
+    Untracked:  zionpark201.png
+    Untracked:  zionpark202.png
+    Untracked:  zionpark203.png
+    Untracked:  zionpark204.png
+    Untracked:  zionpark205.png
+    Untracked:  zionpark206.png
+    Untracked:  zionpark207.png
+    Untracked:  zionpark208.png
+    Untracked:  zionpark209.png
+    Untracked:  zionpark21.png
+    Untracked:  zionpark210.png
+    Untracked:  zionpark211.png
+    Untracked:  zionpark212.png
+    Untracked:  zionpark213.png
+    Untracked:  zionpark214.png
+    Untracked:  zionpark215.png
+    Untracked:  zionpark216.png
+    Untracked:  zionpark217.png
+    Untracked:  zionpark218.png
+    Untracked:  zionpark219.png
+    Untracked:  zionpark22.png
+    Untracked:  zionpark220.png
+    Untracked:  zionpark221.png
+    Untracked:  zionpark222.png
+    Untracked:  zionpark223.png
+    Untracked:  zionpark224.png
+    Untracked:  zionpark225.png
+    Untracked:  zionpark226.png
+    Untracked:  zionpark227.png
+    Untracked:  zionpark228.png
+    Untracked:  zionpark229.png
+    Untracked:  zionpark23.png
+    Untracked:  zionpark230.png
+    Untracked:  zionpark231.png
+    Untracked:  zionpark232.png
+    Untracked:  zionpark233.png
+    Untracked:  zionpark234.png
+    Untracked:  zionpark235.png
+    Untracked:  zionpark236.png
+    Untracked:  zionpark237.png
+    Untracked:  zionpark238.png
+    Untracked:  zionpark239.png
+    Untracked:  zionpark24.png
+    Untracked:  zionpark240.png
+    Untracked:  zionpark241.png
+    Untracked:  zionpark242.png
+    Untracked:  zionpark243.png
+    Untracked:  zionpark244.png
+    Untracked:  zionpark245.png
+    Untracked:  zionpark246.png
+    Untracked:  zionpark247.png
+    Untracked:  zionpark248.png
+    Untracked:  zionpark249.png
+    Untracked:  zionpark25.png
+    Untracked:  zionpark250.png
+    Untracked:  zionpark251.png
+    Untracked:  zionpark252.png
+    Untracked:  zionpark253.png
+    Untracked:  zionpark254.png
+    Untracked:  zionpark255.png
+    Untracked:  zionpark256.png
+    Untracked:  zionpark257.png
+    Untracked:  zionpark258.png
+    Untracked:  zionpark259.png
+    Untracked:  zionpark26.png
+    Untracked:  zionpark260.png
+    Untracked:  zionpark261.png
+    Untracked:  zionpark262.png
+    Untracked:  zionpark263.png
+    Untracked:  zionpark264.png
+    Untracked:  zionpark265.png
+    Untracked:  zionpark266.png
+    Untracked:  zionpark267.png
+    Untracked:  zionpark268.png
+    Untracked:  zionpark269.png
+    Untracked:  zionpark27.png
+    Untracked:  zionpark270.png
+    Untracked:  zionpark271.png
+    Untracked:  zionpark272.png
+    Untracked:  zionpark273.png
+    Untracked:  zionpark274.png
+    Untracked:  zionpark275.png
+    Untracked:  zionpark276.png
+    Untracked:  zionpark277.png
+    Untracked:  zionpark278.png
+    Untracked:  zionpark279.png
+    Untracked:  zionpark28.png
+    Untracked:  zionpark280.png
+    Untracked:  zionpark281.png
+    Untracked:  zionpark282.png
+    Untracked:  zionpark283.png
+    Untracked:  zionpark284.png
+    Untracked:  zionpark285.png
+    Untracked:  zionpark286.png
+    Untracked:  zionpark287.png
+    Untracked:  zionpark288.png
+    Untracked:  zionpark289.png
+    Untracked:  zionpark29.png
+    Untracked:  zionpark290.png
+    Untracked:  zionpark291.png
+    Untracked:  zionpark292.png
+    Untracked:  zionpark293.png
+    Untracked:  zionpark294.png
+    Untracked:  zionpark295.png
+    Untracked:  zionpark296.png
+    Untracked:  zionpark297.png
+    Untracked:  zionpark298.png
+    Untracked:  zionpark299.png
+    Untracked:  zionpark3.png
+    Untracked:  zionpark30.png
+    Untracked:  zionpark300.png
+    Untracked:  zionpark301.png
+    Untracked:  zionpark302.png
+    Untracked:  zionpark303.png
+    Untracked:  zionpark304.png
+    Untracked:  zionpark305.png
+    Untracked:  zionpark306.png
+    Untracked:  zionpark307.png
+    Untracked:  zionpark308.png
+    Untracked:  zionpark309.png
+    Untracked:  zionpark31.png
+    Untracked:  zionpark310.png
+    Untracked:  zionpark311.png
+    Untracked:  zionpark312.png
+    Untracked:  zionpark313.png
+    Untracked:  zionpark314.png
+    Untracked:  zionpark315.png
+    Untracked:  zionpark316.png
+    Untracked:  zionpark317.png
+    Untracked:  zionpark318.png
+    Untracked:  zionpark319.png
+    Untracked:  zionpark32.png
+    Untracked:  zionpark320.png
+    Untracked:  zionpark321.png
+    Untracked:  zionpark322.png
+    Untracked:  zionpark323.png
+    Untracked:  zionpark324.png
+    Untracked:  zionpark325.png
+    Untracked:  zionpark326.png
+    Untracked:  zionpark327.png
+    Untracked:  zionpark328.png
+    Untracked:  zionpark329.png
+    Untracked:  zionpark33.png
+    Untracked:  zionpark330.png
+    Untracked:  zionpark331.png
+    Untracked:  zionpark332.png
+    Untracked:  zionpark333.png
+    Untracked:  zionpark334.png
+    Untracked:  zionpark335.png
+    Untracked:  zionpark336.png
+    Untracked:  zionpark337.png
+    Untracked:  zionpark338.png
+    Untracked:  zionpark339.png
+    Untracked:  zionpark34.png
+    Untracked:  zionpark340.png
+    Untracked:  zionpark341.png
+    Untracked:  zionpark342.png
+    Untracked:  zionpark343.png
+    Untracked:  zionpark344.png
+    Untracked:  zionpark345.png
+    Untracked:  zionpark346.png
+    Untracked:  zionpark347.png
+    Untracked:  zionpark348.png
+    Untracked:  zionpark349.png
+    Untracked:  zionpark35.png
+    Untracked:  zionpark350.png
+    Untracked:  zionpark351.png
+    Untracked:  zionpark352.png
+    Untracked:  zionpark353.png
+    Untracked:  zionpark354.png
+    Untracked:  zionpark355.png
+    Untracked:  zionpark356.png
+    Untracked:  zionpark357.png
+    Untracked:  zionpark358.png
+    Untracked:  zionpark359.png
+    Untracked:  zionpark36.png
+    Untracked:  zionpark360.png
+    Untracked:  zionpark361.png
+    Untracked:  zionpark362.png
+    Untracked:  zionpark363.png
+    Untracked:  zionpark364.png
+    Untracked:  zionpark365.png
+    Untracked:  zionpark366.png
+    Untracked:  zionpark367.png
+    Untracked:  zionpark368.png
+    Untracked:  zionpark369.png
+    Untracked:  zionpark37.png
+    Untracked:  zionpark370.png
+    Untracked:  zionpark371.png
+    Untracked:  zionpark372.png
+    Untracked:  zionpark373.png
+    Untracked:  zionpark374.png
+    Untracked:  zionpark375.png
+    Untracked:  zionpark376.png
+    Untracked:  zionpark377.png
+    Untracked:  zionpark378.png
+    Untracked:  zionpark379.png
+    Untracked:  zionpark38.png
+    Untracked:  zionpark380.png
+    Untracked:  zionpark381.png
+    Untracked:  zionpark382.png
+    Untracked:  zionpark383.png
+    Untracked:  zionpark384.png
+    Untracked:  zionpark385.png
+    Untracked:  zionpark386.png
+    Untracked:  zionpark387.png
+    Untracked:  zionpark388.png
+    Untracked:  zionpark389.png
+    Untracked:  zionpark39.png
+    Untracked:  zionpark390.png
+    Untracked:  zionpark391.png
+    Untracked:  zionpark392.png
+    Untracked:  zionpark393.png
+    Untracked:  zionpark394.png
+    Untracked:  zionpark395.png
+    Untracked:  zionpark396.png
+    Untracked:  zionpark397.png
+    Untracked:  zionpark398.png
+    Untracked:  zionpark399.png
+    Untracked:  zionpark4.png
+    Untracked:  zionpark40.png
+    Untracked:  zionpark400.png
+    Untracked:  zionpark401.png
+    Untracked:  zionpark402.png
+    Untracked:  zionpark403.png
+    Untracked:  zionpark404.png
+    Untracked:  zionpark405.png
+    Untracked:  zionpark406.png
+    Untracked:  zionpark407.png
+    Untracked:  zionpark408.png
+    Untracked:  zionpark409.png
+    Untracked:  zionpark41.png
+    Untracked:  zionpark410.png
+    Untracked:  zionpark411.png
+    Untracked:  zionpark412.png
+    Untracked:  zionpark413.png
+    Untracked:  zionpark414.png
+    Untracked:  zionpark415.png
+    Untracked:  zionpark416.png
+    Untracked:  zionpark417.png
+    Untracked:  zionpark418.png
+    Untracked:  zionpark419.png
+    Untracked:  zionpark42.png
+    Untracked:  zionpark420.png
+    Untracked:  zionpark421.png
+    Untracked:  zionpark422.png
+    Untracked:  zionpark423.png
+    Untracked:  zionpark424.png
+    Untracked:  zionpark425.png
+    Untracked:  zionpark426.png
+    Untracked:  zionpark427.png
+    Untracked:  zionpark428.png
+    Untracked:  zionpark429.png
+    Untracked:  zionpark43.png
+    Untracked:  zionpark430.png
+    Untracked:  zionpark431.png
+    Untracked:  zionpark432.png
+    Untracked:  zionpark433.png
+    Untracked:  zionpark434.png
+    Untracked:  zionpark435.png
+    Untracked:  zionpark436.png
+    Untracked:  zionpark437.png
+    Untracked:  zionpark438.png
+    Untracked:  zionpark439.png
+    Untracked:  zionpark44.png
+    Untracked:  zionpark440.png
+    Untracked:  zionpark441.png
+    Untracked:  zionpark442.png
+    Untracked:  zionpark443.png
+    Untracked:  zionpark444.png
+    Untracked:  zionpark445.png
+    Untracked:  zionpark446.png
+    Untracked:  zionpark447.png
+    Untracked:  zionpark448.png
+    Untracked:  zionpark449.png
+    Untracked:  zionpark45.png
+    Untracked:  zionpark450.png
+    Untracked:  zionpark451.png
+    Untracked:  zionpark452.png
+    Untracked:  zionpark453.png
+    Untracked:  zionpark454.png
+    Untracked:  zionpark455.png
+    Untracked:  zionpark456.png
+    Untracked:  zionpark457.png
+    Untracked:  zionpark458.png
+    Untracked:  zionpark459.png
+    Untracked:  zionpark46.png
+    Untracked:  zionpark460.png
+    Untracked:  zionpark461.png
+    Untracked:  zionpark462.png
+    Untracked:  zionpark463.png
+    Untracked:  zionpark464.png
+    Untracked:  zionpark465.png
+    Untracked:  zionpark466.png
+    Untracked:  zionpark467.png
+    Untracked:  zionpark468.png
+    Untracked:  zionpark469.png
+    Untracked:  zionpark47.png
+    Untracked:  zionpark470.png
+    Untracked:  zionpark471.png
+    Untracked:  zionpark472.png
+    Untracked:  zionpark473.png
+    Untracked:  zionpark474.png
+    Untracked:  zionpark475.png
+    Untracked:  zionpark476.png
+    Untracked:  zionpark477.png
+    Untracked:  zionpark478.png
+    Untracked:  zionpark479.png
+    Untracked:  zionpark48.png
+    Untracked:  zionpark480.png
+    Untracked:  zionpark481.png
+    Untracked:  zionpark482.png
+    Untracked:  zionpark483.png
+    Untracked:  zionpark484.png
+    Untracked:  zionpark485.png
+    Untracked:  zionpark486.png
+    Untracked:  zionpark487.png
+    Untracked:  zionpark488.png
+    Untracked:  zionpark489.png
+    Untracked:  zionpark49.png
+    Untracked:  zionpark490.png
+    Untracked:  zionpark491.png
+    Untracked:  zionpark492.png
+    Untracked:  zionpark493.png
+    Untracked:  zionpark494.png
+    Untracked:  zionpark495.png
+    Untracked:  zionpark496.png
+    Untracked:  zionpark497.png
+    Untracked:  zionpark498.png
+    Untracked:  zionpark499.png
+    Untracked:  zionpark5.png
+    Untracked:  zionpark50.png
+    Untracked:  zionpark500.png
+    Untracked:  zionpark501.png
+    Untracked:  zionpark502.png
+    Untracked:  zionpark503.png
+    Untracked:  zionpark504.png
+    Untracked:  zionpark505.png
+    Untracked:  zionpark506.png
+    Untracked:  zionpark507.png
+    Untracked:  zionpark508.png
+    Untracked:  zionpark509.png
+    Untracked:  zionpark51.png
+    Untracked:  zionpark510.png
+    Untracked:  zionpark511.png
+    Untracked:  zionpark512.png
+    Untracked:  zionpark513.png
+    Untracked:  zionpark514.png
+    Untracked:  zionpark515.png
+    Untracked:  zionpark516.png
+    Untracked:  zionpark517.png
+    Untracked:  zionpark518.png
+    Untracked:  zionpark519.png
+    Untracked:  zionpark52.png
+    Untracked:  zionpark520.png
+    Untracked:  zionpark521.png
+    Untracked:  zionpark522.png
+    Untracked:  zionpark523.png
+    Untracked:  zionpark524.png
+    Untracked:  zionpark525.png
+    Untracked:  zionpark526.png
+    Untracked:  zionpark527.png
+    Untracked:  zionpark528.png
+    Untracked:  zionpark529.png
+    Untracked:  zionpark53.png
+    Untracked:  zionpark530.png
+    Untracked:  zionpark531.png
+    Untracked:  zionpark532.png
+    Untracked:  zionpark533.png
+    Untracked:  zionpark534.png
+    Untracked:  zionpark535.png
+    Untracked:  zionpark536.png
+    Untracked:  zionpark537.png
+    Untracked:  zionpark538.png
+    Untracked:  zionpark539.png
+    Untracked:  zionpark54.png
+    Untracked:  zionpark540.png
+    Untracked:  zionpark541.png
+    Untracked:  zionpark542.png
+    Untracked:  zionpark543.png
+    Untracked:  zionpark544.png
+    Untracked:  zionpark545.png
+    Untracked:  zionpark546.png
+    Untracked:  zionpark547.png
+    Untracked:  zionpark548.png
+    Untracked:  zionpark549.png
+    Untracked:  zionpark55.png
+    Untracked:  zionpark550.png
+    Untracked:  zionpark551.png
+    Untracked:  zionpark552.png
+    Untracked:  zionpark553.png
+    Untracked:  zionpark554.png
+    Untracked:  zionpark555.png
+    Untracked:  zionpark556.png
+    Untracked:  zionpark557.png
+    Untracked:  zionpark558.png
+    Untracked:  zionpark559.png
+    Untracked:  zionpark56.png
+    Untracked:  zionpark560.png
+    Untracked:  zionpark561.png
+    Untracked:  zionpark562.png
+    Untracked:  zionpark563.png
+    Untracked:  zionpark564.png
+    Untracked:  zionpark565.png
+    Untracked:  zionpark566.png
+    Untracked:  zionpark567.png
+    Untracked:  zionpark568.png
+    Untracked:  zionpark569.png
+    Untracked:  zionpark57.png
+    Untracked:  zionpark570.png
+    Untracked:  zionpark571.png
+    Untracked:  zionpark572.png
+    Untracked:  zionpark573.png
+    Untracked:  zionpark574.png
+    Untracked:  zionpark575.png
+    Untracked:  zionpark576.png
+    Untracked:  zionpark577.png
+    Untracked:  zionpark578.png
+    Untracked:  zionpark579.png
+    Untracked:  zionpark58.png
+    Untracked:  zionpark580.png
+    Untracked:  zionpark581.png
+    Untracked:  zionpark582.png
+    Untracked:  zionpark583.png
+    Untracked:  zionpark584.png
+    Untracked:  zionpark585.png
+    Untracked:  zionpark586.png
+    Untracked:  zionpark587.png
+    Untracked:  zionpark588.png
+    Untracked:  zionpark589.png
+    Untracked:  zionpark59.png
+    Untracked:  zionpark590.png
+    Untracked:  zionpark591.png
+    Untracked:  zionpark592.png
+    Untracked:  zionpark593.png
+    Untracked:  zionpark594.png
+    Untracked:  zionpark595.png
+    Untracked:  zionpark596.png
+    Untracked:  zionpark597.png
+    Untracked:  zionpark598.png
+    Untracked:  zionpark599.png
+    Untracked:  zionpark6.png
+    Untracked:  zionpark60.png
+    Untracked:  zionpark600.png
+    Untracked:  zionpark601.png
+    Untracked:  zionpark602.png
+    Untracked:  zionpark603.png
+    Untracked:  zionpark604.png
+    Untracked:  zionpark605.png
+    Untracked:  zionpark606.png
+    Untracked:  zionpark607.png
+    Untracked:  zionpark608.png
+    Untracked:  zionpark609.png
+    Untracked:  zionpark61.png
+    Untracked:  zionpark610.png
+    Untracked:  zionpark611.png
+    Untracked:  zionpark612.png
+    Untracked:  zionpark613.png
+    Untracked:  zionpark614.png
+    Untracked:  zionpark615.png
+    Untracked:  zionpark616.png
+    Untracked:  zionpark617.png
+    Untracked:  zionpark618.png
+    Untracked:  zionpark619.png
+    Untracked:  zionpark62.png
+    Untracked:  zionpark620.png
+    Untracked:  zionpark621.png
+    Untracked:  zionpark622.png
+    Untracked:  zionpark623.png
+    Untracked:  zionpark624.png
+    Untracked:  zionpark625.png
+    Untracked:  zionpark626.png
+    Untracked:  zionpark627.png
+    Untracked:  zionpark628.png
+    Untracked:  zionpark629.png
+    Untracked:  zionpark63.png
+    Untracked:  zionpark630.png
+    Untracked:  zionpark631.png
+    Untracked:  zionpark632.png
+    Untracked:  zionpark633.png
+    Untracked:  zionpark634.png
+    Untracked:  zionpark635.png
+    Untracked:  zionpark636.png
+    Untracked:  zionpark637.png
+    Untracked:  zionpark638.png
+    Untracked:  zionpark639.png
+    Untracked:  zionpark64.png
+    Untracked:  zionpark640.png
+    Untracked:  zionpark641.png
+    Untracked:  zionpark642.png
+    Untracked:  zionpark643.png
+    Untracked:  zionpark644.png
+    Untracked:  zionpark645.png
+    Untracked:  zionpark646.png
+    Untracked:  zionpark647.png
+    Untracked:  zionpark648.png
+    Untracked:  zionpark649.png
+    Untracked:  zionpark65.png
+    Untracked:  zionpark650.png
+    Untracked:  zionpark651.png
+    Untracked:  zionpark652.png
+    Untracked:  zionpark653.png
+    Untracked:  zionpark654.png
+    Untracked:  zionpark655.png
+    Untracked:  zionpark656.png
+    Untracked:  zionpark657.png
+    Untracked:  zionpark658.png
+    Untracked:  zionpark659.png
+    Untracked:  zionpark66.png
+    Untracked:  zionpark660.png
+    Untracked:  zionpark661.png
+    Untracked:  zionpark662.png
+    Untracked:  zionpark663.png
+    Untracked:  zionpark664.png
+    Untracked:  zionpark665.png
+    Untracked:  zionpark666.png
+    Untracked:  zionpark667.png
+    Untracked:  zionpark668.png
+    Untracked:  zionpark669.png
+    Untracked:  zionpark67.png
+    Untracked:  zionpark670.png
+    Untracked:  zionpark671.png
+    Untracked:  zionpark672.png
+    Untracked:  zionpark673.png
+    Untracked:  zionpark674.png
+    Untracked:  zionpark675.png
+    Untracked:  zionpark676.png
+    Untracked:  zionpark677.png
+    Untracked:  zionpark678.png
+    Untracked:  zionpark679.png
+    Untracked:  zionpark68.png
+    Untracked:  zionpark680.png
+    Untracked:  zionpark681.png
+    Untracked:  zionpark682.png
+    Untracked:  zionpark683.png
+    Untracked:  zionpark684.png
+    Untracked:  zionpark685.png
+    Untracked:  zionpark686.png
+    Untracked:  zionpark687.png
+    Untracked:  zionpark688.png
+    Untracked:  zionpark689.png
+    Untracked:  zionpark69.png
+    Untracked:  zionpark690.png
+    Untracked:  zionpark691.png
+    Untracked:  zionpark692.png
+    Untracked:  zionpark693.png
+    Untracked:  zionpark694.png
+    Untracked:  zionpark695.png
+    Untracked:  zionpark696.png
+    Untracked:  zionpark697.png
+    Untracked:  zionpark698.png
+    Untracked:  zionpark699.png
+    Untracked:  zionpark7.png
+    Untracked:  zionpark70.png
+    Untracked:  zionpark700.png
+    Untracked:  zionpark701.png
+    Untracked:  zionpark702.png
+    Untracked:  zionpark703.png
+    Untracked:  zionpark704.png
+    Untracked:  zionpark705.png
+    Untracked:  zionpark706.png
+    Untracked:  zionpark707.png
+    Untracked:  zionpark708.png
+    Untracked:  zionpark709.png
+    Untracked:  zionpark71.png
+    Untracked:  zionpark710.png
+    Untracked:  zionpark711.png
+    Untracked:  zionpark712.png
+    Untracked:  zionpark713.png
+    Untracked:  zionpark714.png
+    Untracked:  zionpark715.png
+    Untracked:  zionpark716.png
+    Untracked:  zionpark717.png
+    Untracked:  zionpark718.png
+    Untracked:  zionpark719.png
+    Untracked:  zionpark72.png
+    Untracked:  zionpark720.png
+    Untracked:  zionpark721.png
+    Untracked:  zionpark722.png
+    Untracked:  zionpark723.png
+    Untracked:  zionpark724.png
+    Untracked:  zionpark725.png
+    Untracked:  zionpark726.png
+    Untracked:  zionpark727.png
+    Untracked:  zionpark728.png
+    Untracked:  zionpark729.png
+    Untracked:  zionpark73.png
+    Untracked:  zionpark730.png
+    Untracked:  zionpark731.png
+    Untracked:  zionpark732.png
+    Untracked:  zionpark733.png
+    Untracked:  zionpark734.png
+    Untracked:  zionpark735.png
+    Untracked:  zionpark736.png
+    Untracked:  zionpark737.png
+    Untracked:  zionpark738.png
+    Untracked:  zionpark739.png
+    Untracked:  zionpark74.png
+    Untracked:  zionpark740.png
+    Untracked:  zionpark741.png
+    Untracked:  zionpark742.png
+    Untracked:  zionpark743.png
+    Untracked:  zionpark744.png
+    Untracked:  zionpark745.png
+    Untracked:  zionpark746.png
+    Untracked:  zionpark747.png
+    Untracked:  zionpark748.png
+    Untracked:  zionpark749.png
+    Untracked:  zionpark75.png
+    Untracked:  zionpark750.png
+    Untracked:  zionpark751.png
+    Untracked:  zionpark752.png
+    Untracked:  zionpark753.png
+    Untracked:  zionpark754.png
+    Untracked:  zionpark755.png
+    Untracked:  zionpark756.png
+    Untracked:  zionpark757.png
+    Untracked:  zionpark758.png
+    Untracked:  zionpark759.png
+    Untracked:  zionpark76.png
+    Untracked:  zionpark760.png
+    Untracked:  zionpark761.png
+    Untracked:  zionpark762.png
+    Untracked:  zionpark763.png
+    Untracked:  zionpark764.png
+    Untracked:  zionpark765.png
+    Untracked:  zionpark766.png
+    Untracked:  zionpark767.png
+    Untracked:  zionpark768.png
+    Untracked:  zionpark769.png
+    Untracked:  zionpark77.png
+    Untracked:  zionpark770.png
+    Untracked:  zionpark771.png
+    Untracked:  zionpark772.png
+    Untracked:  zionpark773.png
+    Untracked:  zionpark774.png
+    Untracked:  zionpark775.png
+    Untracked:  zionpark776.png
+    Untracked:  zionpark777.png
+    Untracked:  zionpark778.png
+    Untracked:  zionpark779.png
+    Untracked:  zionpark78.png
+    Untracked:  zionpark780.png
+    Untracked:  zionpark781.png
+    Untracked:  zionpark782.png
+    Untracked:  zionpark783.png
+    Untracked:  zionpark784.png
+    Untracked:  zionpark785.png
+    Untracked:  zionpark786.png
+    Untracked:  zionpark787.png
+    Untracked:  zionpark788.png
+    Untracked:  zionpark789.png
+    Untracked:  zionpark79.png
+    Untracked:  zionpark790.png
+    Untracked:  zionpark791.png
+    Untracked:  zionpark792.png
+    Untracked:  zionpark793.png
+    Untracked:  zionpark794.png
+    Untracked:  zionpark795.png
+    Untracked:  zionpark796.png
+    Untracked:  zionpark797.png
+    Untracked:  zionpark798.png
+    Untracked:  zionpark799.png
+    Untracked:  zionpark8.png
+    Untracked:  zionpark80.png
+    Untracked:  zionpark800.png
+    Untracked:  zionpark801.png
+    Untracked:  zionpark802.png
+    Untracked:  zionpark803.png
+    Untracked:  zionpark804.png
+    Untracked:  zionpark805.png
+    Untracked:  zionpark806.png
+    Untracked:  zionpark807.png
+    Untracked:  zionpark808.png
+    Untracked:  zionpark809.png
+    Untracked:  zionpark81.png
+    Untracked:  zionpark810.png
+    Untracked:  zionpark811.png
+    Untracked:  zionpark812.png
+    Untracked:  zionpark813.png
+    Untracked:  zionpark814.png
+    Untracked:  zionpark815.png
+    Untracked:  zionpark816.png
+    Untracked:  zionpark817.png
+    Untracked:  zionpark818.png
+    Untracked:  zionpark819.png
+    Untracked:  zionpark82.png
+    Untracked:  zionpark820.png
+    Untracked:  zionpark821.png
+    Untracked:  zionpark822.png
+    Untracked:  zionpark823.png
+    Untracked:  zionpark824.png
+    Untracked:  zionpark825.png
+    Untracked:  zionpark826.png
+    Untracked:  zionpark827.png
+    Untracked:  zionpark828.png
+    Untracked:  zionpark829.png
+    Untracked:  zionpark83.png
+    Untracked:  zionpark830.png
+    Untracked:  zionpark831.png
+    Untracked:  zionpark832.png
+    Untracked:  zionpark833.png
+    Untracked:  zionpark834.png
+    Untracked:  zionpark835.png
+    Untracked:  zionpark836.png
+    Untracked:  zionpark837.png
+    Untracked:  zionpark838.png
+    Untracked:  zionpark839.png
+    Untracked:  zionpark84.png
+    Untracked:  zionpark840.png
+    Untracked:  zionpark841.png
+    Untracked:  zionpark842.png
+    Untracked:  zionpark843.png
+    Untracked:  zionpark844.png
+    Untracked:  zionpark845.png
+    Untracked:  zionpark846.png
+    Untracked:  zionpark847.png
+    Untracked:  zionpark848.png
+    Untracked:  zionpark849.png
+    Untracked:  zionpark85.png
+    Untracked:  zionpark850.png
+    Untracked:  zionpark851.png
+    Untracked:  zionpark852.png
+    Untracked:  zionpark853.png
+    Untracked:  zionpark854.png
+    Untracked:  zionpark855.png
+    Untracked:  zionpark856.png
+    Untracked:  zionpark857.png
+    Untracked:  zionpark858.png
+    Untracked:  zionpark859.png
+    Untracked:  zionpark86.png
+    Untracked:  zionpark860.png
+    Untracked:  zionpark861.png
+    Untracked:  zionpark862.png
+    Untracked:  zionpark863.png
+    Untracked:  zionpark864.png
+    Untracked:  zionpark865.png
+    Untracked:  zionpark866.png
+    Untracked:  zionpark867.png
+    Untracked:  zionpark868.png
+    Untracked:  zionpark869.png
+    Untracked:  zionpark87.png
+    Untracked:  zionpark870.png
+    Untracked:  zionpark871.png
+    Untracked:  zionpark872.png
+    Untracked:  zionpark873.png
+    Untracked:  zionpark874.png
+    Untracked:  zionpark875.png
+    Untracked:  zionpark876.png
+    Untracked:  zionpark877.png
+    Untracked:  zionpark878.png
+    Untracked:  zionpark879.png
+    Untracked:  zionpark88.png
+    Untracked:  zionpark880.png
+    Untracked:  zionpark881.png
+    Untracked:  zionpark882.png
+    Untracked:  zionpark883.png
+    Untracked:  zionpark884.png
+    Untracked:  zionpark885.png
+    Untracked:  zionpark886.png
+    Untracked:  zionpark887.png
+    Untracked:  zionpark888.png
+    Untracked:  zionpark889.png
+    Untracked:  zionpark89.png
+    Untracked:  zionpark890.png
+    Untracked:  zionpark891.png
+    Untracked:  zionpark892.png
+    Untracked:  zionpark893.png
+    Untracked:  zionpark894.png
+    Untracked:  zionpark895.png
+    Untracked:  zionpark896.png
+    Untracked:  zionpark897.png
+    Untracked:  zionpark898.png
+    Untracked:  zionpark899.png
+    Untracked:  zionpark9.png
+    Untracked:  zionpark90.png
+    Untracked:  zionpark900.png
+    Untracked:  zionpark901.png
+    Untracked:  zionpark902.png
+    Untracked:  zionpark903.png
+    Untracked:  zionpark904.png
+    Untracked:  zionpark905.png
+    Untracked:  zionpark906.png
+    Untracked:  zionpark907.png
+    Untracked:  zionpark908.png
+    Untracked:  zionpark909.png
+    Untracked:  zionpark91.png
+    Untracked:  zionpark910.png
+    Untracked:  zionpark911.png
+    Untracked:  zionpark912.png
+    Untracked:  zionpark913.png
+    Untracked:  zionpark914.png
+    Untracked:  zionpark915.png
+    Untracked:  zionpark916.png
+    Untracked:  zionpark917.png
+    Untracked:  zionpark918.png
+    Untracked:  zionpark919.png
+    Untracked:  zionpark92.png
+    Untracked:  zionpark920.png
+    Untracked:  zionpark921.png
+    Untracked:  zionpark922.png
+    Untracked:  zionpark923.png
+    Untracked:  zionpark924.png
+    Untracked:  zionpark925.png
+    Untracked:  zionpark926.png
+    Untracked:  zionpark927.png
+    Untracked:  zionpark928.png
+    Untracked:  zionpark929.png
+    Untracked:  zionpark93.png
+    Untracked:  zionpark930.png
+    Untracked:  zionpark931.png
+    Untracked:  zionpark932.png
+    Untracked:  zionpark933.png
+    Untracked:  zionpark934.png
+    Untracked:  zionpark935.png
+    Untracked:  zionpark936.png
+    Untracked:  zionpark937.png
+    Untracked:  zionpark938.png
+    Untracked:  zionpark939.png
+    Untracked:  zionpark94.png
+    Untracked:  zionpark940.png
+    Untracked:  zionpark941.png
+    Untracked:  zionpark942.png
+    Untracked:  zionpark943.png
+    Untracked:  zionpark944.png
+    Untracked:  zionpark945.png
+    Untracked:  zionpark946.png
+    Untracked:  zionpark947.png
+    Untracked:  zionpark948.png
+    Untracked:  zionpark949.png
+    Untracked:  zionpark95.png
+    Untracked:  zionpark950.png
+    Untracked:  zionpark951.png
+    Untracked:  zionpark952.png
+    Untracked:  zionpark953.png
+    Untracked:  zionpark954.png
+    Untracked:  zionpark955.png
+    Untracked:  zionpark956.png
+    Untracked:  zionpark957.png
+    Untracked:  zionpark958.png
+    Untracked:  zionpark959.png
+    Untracked:  zionpark96.png
+    Untracked:  zionpark960.png
+    Untracked:  zionpark961.png
+    Untracked:  zionpark962.png
+    Untracked:  zionpark963.png
+    Untracked:  zionpark964.png
+    Untracked:  zionpark965.png
+    Untracked:  zionpark966.png
+    Untracked:  zionpark967.png
+    Untracked:  zionpark968.png
+    Untracked:  zionpark969.png
+    Untracked:  zionpark97.png
+    Untracked:  zionpark970.png
+    Untracked:  zionpark971.png
+    Untracked:  zionpark972.png
+    Untracked:  zionpark973.png
+    Untracked:  zionpark974.png
+    Untracked:  zionpark975.png
+    Untracked:  zionpark976.png
+    Untracked:  zionpark977.png
+    Untracked:  zionpark978.png
+    Untracked:  zionpark979.png
+    Untracked:  zionpark98.png
+    Untracked:  zionpark980.png
+    Untracked:  zionpark981.png
+    Untracked:  zionpark982.png
+    Untracked:  zionpark983.png
+    Untracked:  zionpark984.png
+    Untracked:  zionpark985.png
+    Untracked:  zionpark986.png
+    Untracked:  zionpark987.png
+    Untracked:  zionpark988.png
+    Untracked:  zionpark989.png
+    Untracked:  zionpark99.png
+    Untracked:  zionpark990.png
+    Untracked:  zionpark991.png
+    Untracked:  zionpark992.png
+    Untracked:  zionpark993.png
+    Untracked:  zionpark994.png
+    Untracked:  zionpark995.png
+    Untracked:  zionpark996.png
+    Untracked:  zionpark997.png
+    Untracked:  zionpark998.png
+    Untracked:  zionpark999.png
+
+</code></pre>
+<p>
+Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
+</p>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="versions" class="tab-pane fade">
+<p>
+There are no past versions. Publish this analysis with <code>wflow_publish()</code> to start tracking its development.
+</p>
+<hr>
+</div>
+</div>
+</div>
+<p>Welcome to my research website!</p>
+
+
+<!-- Adjust MathJax settings so that all math formulae are shown using
+TeX fonts only; see
+http://docs.mathjax.org/en/latest/configuration.html.  This will make
+the presentation more consistent at the cost of the webpage sometimes
+taking slightly longer to load. Note that this only works because the
+footer is added to webpages before the MathJax javascript. -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
